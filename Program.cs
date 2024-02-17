@@ -13,5 +13,6 @@ namespace Labs
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
         }
+        //Лабораторна робота 5
     }
 }

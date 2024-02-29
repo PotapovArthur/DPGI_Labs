@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Labs", "Labs.csproj", "{61A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2_task1_1", "lab2_task1_1\lab2_task1_1.csproj", "{20DC41C2-3D1A-4295-B182-035888A9EF2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2_task1_2", "..\lab2_task1_2\lab2_task1_2.csproj", "{ADBD97D9-D134-4D48-8C65-700A37099C91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab2_task1_2", "lab2_task1_2\lab2_task1_2\lab2_task1_2.csproj", "{ADBD97D9-D134-4D48-8C65-700A37099C91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

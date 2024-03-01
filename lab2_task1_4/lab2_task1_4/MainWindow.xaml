@@ -1,0 +1,15 @@
+﻿<Window x:Class="lab2_task1_4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2_task1_4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel Height="200" VerticalAlignment="Top" Width="800">
+        <Label DockPanel.Dock="Top" HorizontalAlignment="Center" Content="Label" />
+        <TextBox DockPanel.Dock="Left" Width="300" Text="TextBox"/>
+        <TextBox DockPanel.Dock="Right" Width="300" Text="TextBox" />
+        <Button DockPanel.Dock="Bottom" Width="75" Height="25" Margin="0 100 0 0" Content="Button"/>
+    </DockPanel>
+</Window>

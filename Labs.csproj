@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="lab2_task2\lab2_task2\images\clear.png" />
     <None Remove="lab2_task2\lab2_task2\images\copy.png" />
     <None Remove="lab2_task2\lab2_task2\images\open.png" />
     <None Remove="lab2_task2\lab2_task2\images\paste.png" />
@@ -23,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="lab2_task2\lab2_task2\images\clear.png" />
     <Resource Include="lab2_task2\lab2_task2\images\copy.png" />
     <Resource Include="lab2_task2\lab2_task2\images\open.png" />
     <Resource Include="lab2_task2\lab2_task2\images\paste.png" />

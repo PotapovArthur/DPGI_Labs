@@ -12,7 +12,7 @@
             <GradientStop Color="Blue" Offset="0.5"/>
             <GradientStop Color="Yellow" Offset="1"/>
         </LinearGradientBrush>
-
+        
         <Style x:Key="ButtonStyle" TargetType="Button">
             <Setter Property="Margin" Value="5"/>
             <Setter Property="Background" Value="Transparent"/>
@@ -27,20 +27,20 @@
         </Grid.RowDefinitions>
 
         <Border Grid.Row="0" BorderBrush="#FFCBBEBE" BorderThickness="2" CornerRadius="10" Background="{StaticResource LinearPanelBrush}">
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                <Button Width="100" Height="100" ToolTip="Відкрити" Style="{StaticResource ButtonStyle}">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" FocusManager.IsFocusScope="True">
+                <Button Width="100" Height="100" ToolTip="Відкрити" Style="{StaticResource ButtonStyle}" Command="Open">
                     <Image Source="/open.png" />
                 </Button>
 
-                <Button Width="100" Height="100" ToolTip="Стерти" Style="{StaticResource ButtonStyle}">
+                <Button Width="100" Height="100" ToolTip="Стерти" Style="{StaticResource ButtonStyle}" Command="Delete">
                     <Image Source="/clear.png" />
                 </Button>
 
-                <Button Width="100" Height="100" ToolTip="Копіювати" Style="{StaticResource ButtonStyle}">
+                <Button Width="100" Height="100" ToolTip="Копіювати" Style="{StaticResource ButtonStyle}" Command="Copy">
                     <Image Source="/copy.png" />
                 </Button>
 
-                <Button Width="100" Height="100" ToolTip="Вставити" Style="{StaticResource ButtonStyle}">
+                <Button Width="100" Height="100" ToolTip="Вставити" Style="{StaticResource ButtonStyle}" Command="Paste">
                     <Image Source="/paste.png" />
                 </Button>
             </StackPanel>
@@ -53,10 +53,13 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-                <TextBox Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="WrapWithOverflow" Margin="10"/>
+                <TextBox x:Name="textBox" Grid.Row="0" VerticalScrollBarVisibility="Visible" TextWrapping="WrapWithOverflow" Margin="10"/>
 
                 <DockPanel Grid.Row="1" Margin="10">
-                    <Button Content="OK" Width="75" Height="25" DockPanel.Dock="Bottom"/>
+                    <Label Content="Розмір шрифту:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <Slider x:Name="fontSlider" Minimum="12" Maximum="100" MinWidth="100" Margin="4"
+                            Value="{Binding ElementName=textBox, Path=FontSize}" />
+                    <Button Content="OK" Width="75" Height="25" DockPanel.Dock="Bottom" Command="Save"/>
                 </DockPanel>
             </Grid>
         </Border>

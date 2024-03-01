@@ -1,0 +1,14 @@
+﻿<Window x:Class="lab2_task1_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2_task1_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Canvas Background="#FF00FFFE">
+        <Label Content="Label" Canvas.Top="20" Canvas.Left="20"/>
+        <TextBox Text="TextBox" Canvas.Top="40" Canvas.Left="40"/>
+        <Button Content="Button" Canvas.Top="60" Canvas.Left="60"/>
+    </Canvas>
+</Window>

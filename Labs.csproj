@@ -12,6 +12,7 @@
     <Folder Include="lab2_task1_2\" />
     <Folder Include="lab2_task1_3\" />
     <Folder Include="lab2_task1_4\" />
+    <Folder Include="lab2_task1_5\" />
   </ItemGroup>
 
 </Project>

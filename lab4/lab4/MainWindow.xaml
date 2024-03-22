@@ -1,0 +1,61 @@
+﻿<Window x:Class="lab4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab4"
+        mc:Ignorable="d"
+        Title="Students DB" Height="450" Width="800">
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="Create" Click="Create"/>
+            <Separator/>
+            <Button Content="Update" Click="Update"/>
+            <Separator/>
+            <Button Content="Delete" Click="Delete"/>
+        </ToolBar>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ListBox Grid.Row="0" 
+                     Grid.Column="0" 
+                     Grid.ColumnSpan="2" 
+                     Margin="0,0,0,3"
+                     ScrollViewer.VerticalScrollBarVisibility="Auto"
+                     Name="list"
+                     ItemsSource="{Binding}" 
+                     DisplayMemberPath="FullName" />
+
+            <TextBlock Grid.Row="1" Margin="5">Record Book Number:</TextBlock>
+            <TextBox Grid.Row="1" Grid.Column="1" Name="txtRecordBookNumber"
+                Text="{Binding Path=SelectedItem.ID, ElementName=list, Mode=OneWay}"
+                Focusable="True"/>
+
+            <TextBlock Grid.Row="2" Margin="5">Full Name:</TextBlock>
+            <TextBox Grid.Row="2" Grid.Column="1" Name="txtFullName"
+                Text="{Binding Path=SelectedItem.FullName, ElementName=list, Mode=OneWay}"
+                Focusable="True" />
+
+            <TextBlock Grid.Row="3" Margin="5">Group:</TextBlock>
+            <TextBox Grid.Row="3" Grid.Column="1" Name="txtGroup"
+                Text="{Binding Path=SelectedItem.Group, ElementName=list, Mode=OneWay}"
+                Focusable="True" />
+
+            <TextBlock Grid.Row="4" Margin="5">Address:</TextBlock>
+            <TextBox Grid.Row="4" Grid.Column="1" Name="txtAddress"
+                Text="{Binding Path=SelectedItem.Address, ElementName=list, Mode=OneWay}"
+                Focusable="True" />
+        </Grid>
+    </DockPanel>
+</Window>
